@@ -13,7 +13,7 @@ const Posts = () => {
             })
     }, []);
 
-
+    console.log(blogs)
     return (
         <div className='flex w-10/12 m-auto'>
             <div className=' w-9/12  mt-10'>
