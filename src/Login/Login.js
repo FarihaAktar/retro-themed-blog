@@ -115,7 +115,7 @@ const Login = () => {
                     <br />
                     <br />
                     <div className="">
-                        <h6 className='font-black text-gray-600'>Don't have an account?</h6>
+                        <h6 className='font-black text-gray-300'>Don't have an account?</h6>
                         <p className='cursor-pointer font-black hover:text-yellow-800' onClick={handleChange}>Create an account</p>
                     </div>
                 </form>
@@ -132,7 +132,7 @@ const Login = () => {
                     <br />
                     <br />
                     <div>
-                        <h1 className='font-black text-gray-600'>Already have an account?</h1>
+                        <h1 className='font-black text-gray-300'>Already have an account?</h1>
                         <p className='cursor-pointer font-black hover:text-yellow-800' onClick={handleChange}>Go To Login Page</p>
                     </div>
                 </form>}
