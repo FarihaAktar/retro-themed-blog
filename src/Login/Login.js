@@ -69,7 +69,6 @@ const Login = () => {
             firebase.auth().createUserWithEmailAndPassword(admin.email, admin.password)
                 .then((userCredential) => {
                     let user = userCredential.user;
-                    // console.log(user)
                     const userInfo = {...admin}
                     setLoggedInUser(userInfo);
                     history.replace(from)
@@ -103,31 +102,38 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='h-screen flex item-center justify-center' style={{backgroundColor: "#897853",}}>
             {account ?
-                <form onSubmit={handleSignIn}>
-                    <input onBlur={handleBlur} className="" type="email" name="email" required placeholder="Email" />
-                    <br />
-                    <input onBlur={handleBlur} className="" type="password" name="password" required placeholder="Password" />
+                <form className='border-4 border-gray-700 lg:w-5/12 md:w-7/12 sm:w-8/12 w-8/12  m-auto p-6' onSubmit={handleSignIn}>
+                    <input className='bg-transparent border-b-2 border-gray-400 w-full  focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent' onBlur={handleBlur}  type="email" name="email" required placeholder="Email" />
                     <br />
                     <br />
-                    <input className="" type="submit" value="Login" />
+                    <input onBlur={handleBlur} className="bg-transparent border-b-2 border-gray-400 w-full  focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent" type="password" name="password" required placeholder="Password" />
+                    <br />
+                    <br />
+                    <input className="px-11 py-2 font-black bg-yellow-900 text-white cursor-pointer hover:bg-yellow-800 hover:text-black" type="submit" value="Login" />
+                    <br />
+                    <br />
                     <div className="">
-                        <h6>Don't have an account?</h6>
-                        <p className='cursor-pointer hover:text-pink-600' onClick={handleChange}>Create an account</p>
+                        <h6 className='font-black text-gray-600'>Don't have an account?</h6>
+                        <p className='cursor-pointer font-black hover:text-yellow-800' onClick={handleChange}>Create an account</p>
                     </div>
                 </form>
                 :
-                <form onSubmit={handleSubmit(onSubmit)}>
-
-                    <input placeholder="Email" required {...register("email")} />
-
-                    <input type='password' placeholder="Password" required {...register("password")} />
-
-                    <input type="submit" />
+                <form className='border-4 border-gray-700 lg:w-5/12 md:w-7/12 sm:w-8/12 w-8/12  m-auto p-6' onSubmit={handleSubmit(onSubmit)}>
+                    
+                    <input className='bg-transparent border-b-2 border-gray-400 w-full  focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent' placeholder="Email" required {...register("email")} />
+                    <br />
+                    <br />
+                    <input className="bg-transparent border-b-2 border-gray-400 w-full  focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent" type='password' placeholder="Password" required {...register("password")} />
+                    <br />
+                    <br />
+                    <input className="px-11 py-2 font-black bg-yellow-900 text-white cursor-pointer hover:bg-yellow-800 hover:text-black" type="submit" />
+                    <br />
+                    <br />
                     <div>
-                        <h1>Already have an account?</h1>
-                        <p className='cursor-pointer hover:text-pink-600' onClick={handleChange}>Go To Login Page</p>
+                        <h1 className='font-black text-gray-600'>Already have an account?</h1>
+                        <p className='cursor-pointer font-black hover:text-yellow-800' onClick={handleChange}>Go To Login Page</p>
                     </div>
                 </form>}
 

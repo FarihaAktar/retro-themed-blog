@@ -15,14 +15,14 @@ const Posts = () => {
 
     console.log(blogs)
     return (
-        <div className='flex w-10/12 m-auto'>
-            <div className=' w-9/12  mt-10'>
+        <div className='flex lg:w-10/12 md:w-11/12 w-11/12 m-auto'>
+            <div className=' lg:w-10/12 md:w-11/12 sm:w-full w-full  mt-10'>
                 <h1 className='text-2xl font-black text-gray-500'>Recent Posts</h1>
                 {
                     blogs.map(blog => <Post blog={blog} key={blog._id}></Post>)
                 }
             </div>
-            <div className='w-2/12 ml-3 mt-20'>
+            <div className='lg:w-2/12 md:w-3/12 md:block sm:hidden hidden ml-3 mt-20'>
                 <div>
                     <img className='w-52 h-56 object-cover' src={img} alt="" />
                     <h1 className='mt-2 font-black'>Traveling Alone</h1>

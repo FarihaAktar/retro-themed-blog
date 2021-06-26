@@ -77,7 +77,7 @@ const AddBlog = () => {
                                 <h1 className='text-center text-3xl text-custom' >Add New Blog</h1>
                                 <div className='rounded-full border-gray-700 border-4 ml-8'></div>
                             </div>
-                            <form className='w-5/12 p-6 m-auto mt-14' onSubmit={handleSubmit(onSubmit)}>
+                            <form className='lg:w-5/12 md:w-7/12 sm:w-8/12 w-8/12 p-6 m-auto mt-14' onSubmit={handleSubmit(onSubmit)}>
                                 <input className='bg-transparent border-b-2 border-gray-500 w-full focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:border-transparent' placeholder="Add Title" required {...register("title")} />
                                 <br />
                                 <br />
