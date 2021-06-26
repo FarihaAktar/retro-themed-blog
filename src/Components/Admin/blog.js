@@ -4,7 +4,7 @@ const blog = ({blog}) => {
     const {date, title, _id} = blog;
 
     const deleteBlog = (id) =>{
-        fetch("http://localhost:4000/delete/" + id, {
+        fetch("https://tranquil-gorge-87643.herokuapp.com/delete/" + id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

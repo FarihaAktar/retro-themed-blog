@@ -13,7 +13,7 @@ const AddBlog = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:4000/admin?email=" + loggedInUser.email)
+        fetch("https://tranquil-gorge-87643.herokuapp.com/admin?email=" + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 setIsAdmin(data)
@@ -30,7 +30,7 @@ const AddBlog = () => {
         }
 
         if (productData.imageURL !== null) {
-            const url = 'http://localhost:4000/addblog';
+            const url = 'https://tranquil-gorge-87643.herokuapp.com/addblog';
             fetch(url, {
                 method: 'POST',
                 headers: {

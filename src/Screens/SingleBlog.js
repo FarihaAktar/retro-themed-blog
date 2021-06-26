@@ -9,7 +9,7 @@ const SingleBlog = () => {
     const [singlePost, setSinglePost] = useState({})
 
     useEffect(() => {
-        fetch("http://localhost:4000/singlePost/" + id)
+        fetch("https://tranquil-gorge-87643.herokuapp.com/singlePost/" + id)
             .then(res => res.json())
             .then(data => {
                 setSinglePost(data[0])
